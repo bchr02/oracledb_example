@@ -2,15 +2,17 @@
 
 This repo is meant to demonstrate how to move a Node.js app, which depends [node-oracledb](https://github.com/oracle/node-oracledb), within a Docker Image.
 
-You may try it by running:
-```
-docker pull bchr02/oracledb_example
-docker run -d bchr02/oracledb_example
-```
+## You may try this example with these steps:
 
-However, since there is no Oracle server running within it, it will not output any results.
+1. [Download](https://github.com/bchr02/oracledb_example/archive/master.zip) and extract this repo into a folder.
+2. open a command prompt to that folder
+3. edit [lines 16-18 within app.js](https://github.com/bchr02/oracledb_example/blob/master/app.js#L16-L18) and change the username, password and connectString so that it matches your environment. Also, change the query on [line 25](https://github.com/bchr02/oracledb_example/blob/master/app.js#L25) to something that will work with your database.
+3. ```docker build -t test/oracledb_example .```
+4. ```docker run -d test/oracledb_example```
 
-**Here is how I created it:**
+Now if you check the logs you should see the results of your query. ```docker logs CONTAINERID```
+
+## Here is how I created this example:
 
 1. create a new app folder. I will refer to this folder as your app folder.
 2. copy [Dockerfile](https://github.com/bchr02/oracledb_example/blob/master/Dockerfile) into your app folder
