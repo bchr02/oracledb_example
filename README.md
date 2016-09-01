@@ -21,7 +21,7 @@ Now if you check the logs you should see the results of your query. ```docker lo
 5. download the the free Basic and SDK ZIPs from [Oracle Technology Network](http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html)
 6. extract the contents of both ZIPs into the instantclient folder
 
-**If you plan to push to a git repository you must use Git Large File Storage for the Oracle libraries because GitHub goesn't allow files larger than 50MB or totaling over 100MBs. Therefore, before you ```git add``` you must:**
+**If you plan to push to a git repository you must use Git Large File Storage for the Oracle libraries because GitHub doesn't allow files larger than 50MB or totaling over 100MBs. Therefore, before you ```git add``` you must:**
 
 1. be sure to have Git Large File Storage installed (free)
 2. once Git LFS is installed, you must run ```git lfs install```. This only needs to be done once per machine.
